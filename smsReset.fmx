@@ -1,0 +1,184 @@
+object frmSmsReset: TfrmSmsReset
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 612
+  ClientWidth = 372
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCloseQuery = FormCloseQuery
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object pnlEncabezado: TPanel
+    Align = MostTop
+    Size.Width = 372.000000000000000000
+    Size.Height = 35.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'pnlEncabezadoStyle1'
+    TabOrder = 1
+    object btnRegresar: TButton
+      Align = Left
+      StyledSettings = [Family, Style]
+      Size.Width = 65.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 11
+      Text = #55357#56601
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 25.000000000000000000
+      OnClick = btnRegresarClick
+    end
+  end
+  object pnlFooter: TPanel
+    Align = MostBottom
+    Margins.Top = 5.000000000000000000
+    Position.Y = 593.000000000000000000
+    Size.Width = 372.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'pnlEncabezadoStyle1'
+    TabOrder = 0
+    object NameAutor: TLabel
+      Align = Center
+      StyledSettings = [Style, FontColor]
+      Size.Width = 280.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 10.000000000000000000
+      TextSettings.HorzAlign = Center
+      Text = #55357#56446' DevelopedBy Gio '#55357#56446
+      TabOrder = 6
+    end
+  end
+  object VertScrollBox1: TVertScrollBox
+    Align = Client
+    Size.Width = 372.000000000000000000
+    Size.Height = 553.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Viewport.Width = 372.000000000000000000
+    Viewport.Height = 553.000000000000000000
+    object txtResetInst: TText
+      Align = MostTop
+      Margins.Left = 35.000000000000000000
+      Margins.Top = 80.000000000000000000
+      Margins.Right = 35.000000000000000000
+      Position.X = 35.000000000000000000
+      Position.Y = 80.000000000000000000
+      Size.Width = 302.000000000000000000
+      Size.Height = 73.000000000000000000
+      Size.PlatformDefault = False
+      Text = 
+        'Para resetear su contrase'#241'a ingrese su numero con el que este as' +
+        'ociado su cuenta, recibira un mensaje y debera de ingresar el co' +
+        'digo expedido'
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.HorzAlign = Leading
+    end
+    object lblCorreoReset: TLabel
+      Align = MostTop
+      StyledSettings = [Style, FontColor]
+      Margins.Left = 35.000000000000000000
+      Margins.Top = 20.000000000000000000
+      Margins.Right = 35.000000000000000000
+      Position.X = 35.000000000000000000
+      Position.Y = 173.000000000000000000
+      Size.Width = 302.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 13.000000000000000000
+      Text = 'Correo (Verifique que sea correcto)'
+      TabOrder = 4
+    end
+    object edtCorreoReset: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = MostTop
+      TabOrder = 1
+      Position.X = 35.000000000000000000
+      Position.Y = 190.000000000000000000
+      Margins.Left = 35.000000000000000000
+      Margins.Right = 35.000000000000000000
+      Size.Width = 302.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object CheckBox1: TCheckBox
+      Align = MostTop
+      StyledSettings = [Style, FontColor]
+      Margins.Left = 200.000000000000000000
+      Margins.Top = 7.000000000000000000
+      Margins.Right = 35.000000000000000000
+      Position.X = 200.000000000000000000
+      Position.Y = 229.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Editar Correo'
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 13.000000000000000000
+      OnChange = CheckBox1Change
+    end
+    object NumReset: TLabel
+      Align = MostTop
+      StyledSettings = [Style, FontColor]
+      Margins.Left = 35.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 35.000000000000000000
+      Position.X = 35.000000000000000000
+      Position.Y = 263.000000000000000000
+      Size.Width = 302.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 13.000000000000000000
+      Text = 'Inserte numero'
+      TabOrder = 7
+    end
+    object edtNumReset: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = MostTop
+      TabOrder = 8
+      KeyboardType = PhonePad
+      Position.X = 35.000000000000000000
+      Position.Y = 280.000000000000000000
+      Margins.Left = 35.000000000000000000
+      Margins.Right = 35.000000000000000000
+      Size.Width = 302.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object btnSendCode: TButton
+      Align = MostTop
+      StyledSettings = [Style, FontColor]
+      Margins.Left = 70.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 70.000000000000000000
+      Position.X = 70.000000000000000000
+      Position.Y = 322.000000000000000000
+      Size.Width = 232.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      Text = 'Enviar codigo'
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 13.000000000000000000
+      TintColor = claRoyalblue
+      OnClick = btnSendCodeClick
+    end
+  end
+  object QueryCorreoValidar: TFDQuery
+    Connection = frmRegister.db
+    Left = 40
+    Top = 64
+  end
+  object QueryValidarNum: TFDQuery
+    Connection = frmRegister.db
+    Left = 160
+    Top = 64
+  end
+end

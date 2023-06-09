@@ -1,0 +1,329 @@
+object frmPassReset: TfrmPassReset
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 612
+  ClientWidth = 392
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object pnlEncabezado: TPanel
+    Align = MostTop
+    Size.Width = 392.000000000000000000
+    Size.Height = 35.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'pnlEncabezadoStyle1'
+    TabOrder = 1
+    object btnRegresar: TButton
+      Align = Left
+      StyledSettings = [Family, Style]
+      Size.Width = 65.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 11
+      Text = #55357#56601
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 25.000000000000000000
+      OnClick = btnRegresarClick
+    end
+  end
+  object pnlFooter: TPanel
+    Align = MostBottom
+    Margins.Top = 5.000000000000000000
+    Position.Y = 593.000000000000000000
+    Size.Width = 392.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'pnlEncabezadoStyle1'
+    TabOrder = 0
+    object NameAutor: TLabel
+      Align = Center
+      StyledSettings = [Style, FontColor]
+      Size.Width = 280.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 10.000000000000000000
+      TextSettings.HorzAlign = Center
+      Text = #55357#56446' DevelopedBy Gio '#55357#56446
+      TabOrder = 6
+    end
+  end
+  object VertScrollBox1: TVertScrollBox
+    Align = Client
+    Size.Width = 392.000000000000000000
+    Size.Height = 553.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Viewport.Width = 392.000000000000000000
+    Viewport.Height = 553.000000000000000000
+    object lblTextCode: TLabel
+      Align = MostTop
+      StyledSettings = [Style, FontColor]
+      Margins.Left = 55.000000000000000000
+      Margins.Top = 100.000000000000000000
+      Margins.Right = 55.000000000000000000
+      Position.X = 55.000000000000000000
+      Position.Y = 100.000000000000000000
+      Size.Width = 282.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 13.000000000000000000
+      Text = 'Ingrese su codigo de recuperacion '
+      TabOrder = 0
+    end
+    object editCode: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = MostTop
+      TabOrder = 1
+      KeyboardType = NumberPad
+      Position.X = 55.000000000000000000
+      Position.Y = 117.000000000000000000
+      Margins.Left = 55.000000000000000000
+      Margins.Right = 55.000000000000000000
+      Margins.Bottom = 20.000000000000000000
+      Size.Width = 282.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object btnCode: TButton
+      Align = MostTop
+      StyledSettings = [Style, FontColor]
+      Margins.Left = 90.000000000000000000
+      Margins.Right = 90.000000000000000000
+      Margins.Bottom = 25.000000000000000000
+      Position.X = 90.000000000000000000
+      Position.Y = 169.000000000000000000
+      Size.Width = 212.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Verificar codigo'
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 13.000000000000000000
+      TintColor = claSlateblue
+      OnClick = btnCodeClick
+    end
+    object Layout4: TLayout
+      Align = MostTop
+      Enabled = False
+      Position.Y = 222.000000000000000000
+      Size.Width = 392.000000000000000000
+      Size.Height = 182.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object lblPassVery: TLabel
+        Align = MostTop
+        StyledSettings = [Style, FontColor]
+        Margins.Left = 55.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 55.000000000000000000
+        Position.X = 55.000000000000000000
+        Position.Y = 111.000000000000000000
+        Size.Width = 282.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 13.000000000000000000
+        Text = 'Ingrese nuevamente su contrase'#241'a'
+        TabOrder = 5
+      end
+      object btnRestablecer: TButton
+        Align = MostTop
+        StyledSettings = [Style, FontColor]
+        Margins.Left = 90.000000000000000000
+        Margins.Top = 15.000000000000000000
+        Margins.Right = 90.000000000000000000
+        Position.X = 90.000000000000000000
+        Position.Y = 177.000000000000000000
+        Size.Width = 212.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Restablecer contrase'#241'a'
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 13.000000000000000000
+        TintColor = claRoyalblue
+        OnClick = btnRestablecerClick
+      end
+      object edtPassVery: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = MostTop
+        TabOrder = 9
+        Password = True
+        MaxLength = 20
+        Position.X = 55.000000000000000000
+        Position.Y = 130.000000000000000000
+        HelpType = htKeyword
+        Margins.Left = 55.000000000000000000
+        Margins.Right = 55.000000000000000000
+        Size.Width = 282.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Layout6: TLayout
+        Align = MostTop
+        Margins.Top = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 392.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 8
+        object btnInfo: TButton
+          Align = MostLeft
+          Padding.Left = 5.000000000000000000
+          Padding.Top = 5.000000000000000000
+          Padding.Right = 5.000000000000000000
+          Padding.Bottom = 5.000000000000000000
+          Position.X = 233.000000000000000000
+          Size.Width = 32.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstyle'
+          TabOrder = 9
+          Text = #8505#65039
+          TintColor = claPlum
+          TouchTargetExpansion.Left = 0.000000000000000000
+          TouchTargetExpansion.Top = 0.000000000000000000
+          TouchTargetExpansion.Right = 0.000000000000000000
+          TouchTargetExpansion.Bottom = 0.000000000000000000
+          OnClick = btnInfoClick
+        end
+        object lblResetPass: TLabel
+          Align = MostLeft
+          StyledSettings = [Style, FontColor]
+          Margins.Left = 55.000000000000000000
+          Position.X = 55.000000000000000000
+          Size.Width = 178.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Comic Sans MS'
+          TextSettings.Font.Size = 13.000000000000000000
+          Text = 'Ingrese su nueva contrase'#241'a'
+          TabOrder = 4
+        end
+        object MostPass1: TButton
+          Align = MostLeft
+          StyledSettings = [Family, Style, FontColor]
+          Margins.Right = 55.000000000000000000
+          Position.X = 265.000000000000000000
+          Size.Width = 35.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstyle'
+          TabOrder = 11
+          Text = #55357#56373
+          TextSettings.Font.Size = 25.000000000000000000
+          TintColor = claRoyalblue
+          OnClick = MostPass1Click
+        end
+      end
+      object Layout7: TLayout
+        Align = MostTop
+        Position.Y = 42.000000000000000000
+        Size.Width = 392.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 7
+        OnClick = Layout7Click
+        object editResetPass: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = MostTop
+          TabOrder = 3
+          Password = True
+          Position.X = 55.000000000000000000
+          Margins.Left = 55.000000000000000000
+          Margins.Right = 55.000000000000000000
+          Size.Width = 282.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChangeTracking = editResetPassChangeTracking
+        end
+      end
+      object Layout8: TLayout
+        Align = MostTop
+        Position.Y = 74.000000000000000000
+        Size.Width = 392.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 10
+        object Label1: TLabel
+          Align = MostLeft
+          StyledSettings = [Family, Style]
+          Margins.Left = 45.000000000000000000
+          Position.X = 45.000000000000000000
+          Size.Width = 56.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 10.000000000000000000
+          TextSettings.FontColor = claCrimson
+          Text = '1 Mayusc.'
+          TabOrder = 4
+        end
+        object Label2: TLabel
+          Align = MostLeft
+          StyledSettings = [Family, Style]
+          Position.X = 101.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 10.000000000000000000
+          TextSettings.FontColor = claCrimson
+          Text = '1 Minusc.'
+          TabOrder = 3
+        end
+        object Label3: TLabel
+          Align = MostLeft
+          StyledSettings = [Family, Style]
+          Position.X = 149.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 10.000000000000000000
+          TextSettings.FontColor = claCrimson
+          Text = '1 Num.'
+          TabOrder = 2
+        end
+        object Label4: TLabel
+          Align = MostLeft
+          StyledSettings = [Family, Style]
+          Position.X = 185.000000000000000000
+          Size.Width = 64.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 10.000000000000000000
+          TextSettings.FontColor = claCrimson
+          Text = '1 carac. esp.'
+          TabOrder = 1
+        end
+        object Label5: TLabel
+          Align = Left
+          StyledSettings = [Family, Style]
+          Margins.Right = 45.000000000000000000
+          Position.X = 249.000000000000000000
+          Size.Width = 88.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 10.000000000000000000
+          TextSettings.FontColor = claCrimson
+          Text = 'Long. Mayor a 8'
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  object QueryReset: TFDQuery
+    Connection = frmRegister.db
+    SQL.Strings = (
+      
+        ' update user set contrasena = "10" where correo = "gioMaga_@gmai' +
+        'l.com");')
+    Left = 72
+    Top = 32
+  end
+end

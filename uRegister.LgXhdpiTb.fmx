@@ -1,0 +1,82 @@
+inherited frmRegister_LgXhdpiTb: TfrmRegister_LgXhdpiTb
+  ClientHeight = 828
+  ClientWidth = 480
+  DesignerMasterStyle = 3
+  inherited pnlEncabezado: TPanel
+    Size.Width = 480.000000000000000000
+  end
+  inherited pnlFooter: TPanel
+    Position.Y = 809.000000000000000000
+    Size.Width = 480.000000000000000000
+  end
+  inherited VertScrollBox1: TVertScrollBox
+    Size.Width = 480.000000000000000000
+    Size.Height = 769.000000000000000000
+    Viewport.Width = 480.000000000000000000
+    Viewport.Height = 769.000000000000000000
+    inherited layout1: TLayout
+      Size.Width = 480.000000000000000000
+      inherited lblName: TLabel
+        Size.Width = 390.000000000000000000
+      end
+      inherited edtName: TEdit
+        Size.Width = 390.000000000000000000
+      end
+    end
+    inherited Layout5: TLayout
+      Size.Width = 480.000000000000000000
+      inherited Layout3: TLayout
+        Position.X = 292.000000000000000000
+      end
+    end
+    inherited Layout4: TLayout
+      Size.Width = 480.000000000000000000
+      inherited edtCorreo: TEdit
+        Size.Width = 390.000000000000000000
+      end
+      inherited lblNumero: TLabel
+        Size.Width = 390.000000000000000000
+      end
+      inherited edtNum: TEdit
+        Size.Width = 390.000000000000000000
+      end
+      inherited lblCorreo: TLabel
+        Size.Width = 390.000000000000000000
+      end
+    end
+    inherited Layout7: TLayout
+      Size.Width = 480.000000000000000000
+      inherited edtPassword: TEdit
+        Size.Width = 390.000000000000000000
+      end
+    end
+    inherited lblPassVery: TLabel
+      Size.Width = 390.000000000000000000
+    end
+    inherited Layout9: TLayout
+      Size.Width = 480.000000000000000000
+      inherited edtPassVery: TEdit
+        Size.Width = 390.000000000000000000
+      end
+    end
+    inherited Layout8: TLayout
+      Size.Width = 480.000000000000000000
+    end
+    inherited btnSave: TButton
+      Margins.Bottom = 100.000000000000000000
+      Size.Width = 250.000000000000000000
+    end
+    inherited Layout6: TLayout
+      Size.Width = 480.000000000000000000
+      inherited btnInfo: TButton
+        Align = MostLeft
+        Margins.Right = 240.000000000000000000
+      end
+      inherited MostPass1: TButton
+        Align = MostLeft
+        Position.X = 401.000000000000000000
+        Size.Width = 240.000000000000000000
+      end
+    end
+  end
+end
