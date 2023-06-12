@@ -6,7 +6,8 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.Layouts, FMX.DialogService, FMX.TabControl,
-  FMX.Edit, FMX.ListBox, FMX.DateTimeCtrls;
+  FMX.Edit, FMX.ListBox, FMX.DateTimeCtrls, FMX.ListView.Types,
+  FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView;
 
 type
   TfrmMenu = class(TForm)
@@ -50,10 +51,24 @@ type
     Edit9: TEdit;
     Edit10: TEdit;
     Button2: TButton;
+    Layout1: TLayout;
+    Label14: TLabel;
+    Layout2: TLayout;
+    Layout3: TLayout;
+    Label15: TLabel;
+    Layout4: TLayout;
+    Label16: TLabel;
+    Edit11: TEdit;
+    Edit12: TEdit;
+    Edit13: TEdit;
+    Button3: TButton;
+    Label17: TLabel;
+    ListView1: TListView;
     procedure btnCloseClick(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure TabItem1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Layout3Resize(Sender: TObject);
   private
     { Private declarations }
   public
@@ -67,6 +82,8 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.LgXhdpiTb.fmx ANDROID}
+
 uses
 uRegister, uMain;
 
@@ -127,6 +144,12 @@ begin
   end;
   CanClose := CloseOk;
 
+end;
+
+procedure TfrmMenu.Layout3Resize(Sender: TObject);
+begin
+Layout2.Size.Width := frmMenu.Width/2;
+Layout3.Size.Width := frmMenu.Width/2;
 end;
 
 procedure TfrmMenu.TabItem1Click(Sender: TObject);

@@ -1,0 +1,164 @@
+inherited frmMenu_LgXhdpiTb: TfrmMenu_LgXhdpiTb
+  ClientHeight = 828
+  ClientWidth = 480
+  DesignerMasterStyle = 3
+  inherited pnlEncabezado: TPanel
+    Size.Width = 480.000000000000000000
+    inherited btnClose: TButton
+      Position.X = 445.000000000000000000
+    end
+  end
+  inherited VertScrollBox1: TVertScrollBox
+    Size.Width = 480.000000000000000000
+    Size.Height = 769.000000000000000000
+    Viewport.Width = 480.000000000000000000
+    Viewport.Height = 769.000000000000000000
+    inherited TabControl1: TTabControl
+      Size.Width = 480.000000000000000000
+      Size.Height = 769.000000000000000000
+      Sizes = (
+        480s
+        720s
+        480s
+        720s
+        480s
+        720s)
+      inherited TabItem1: TTabItem
+        Size.Width = 160.000000000000000000
+        ExplicitSize.cx = 125.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inherited Panel1: TPanel
+          Size.Width = 480.000000000000000000
+          Size.Height = 720.000000000000000000
+          inherited ListBox1: TListBox
+            Size.Width = 450.000000000000000000
+            Viewport.Width = 346.000000000000000000
+            Viewport.Height = 90.000000000000000000
+          end
+          inherited Label2: TLabel
+            Size.Width = 465.000000000000000000
+          end
+          inherited Edit1: TEdit
+            Size.Width = 450.000000000000000000
+          end
+          inherited Label1: TLabel
+            Size.Width = 465.000000000000000000
+          end
+          inherited Label4: TLabel
+            Size.Width = 465.000000000000000000
+          end
+          inherited Label5: TLabel
+            Size.Width = 465.000000000000000000
+          end
+          inherited Label6: TLabel
+            Size.Width = 465.000000000000000000
+          end
+          inherited Label7: TLabel
+            Size.Width = 465.000000000000000000
+          end
+          inherited Edit2: TEdit
+            Size.Width = 450.000000000000000000
+          end
+          inherited Edit3: TEdit
+            Size.Width = 450.000000000000000000
+          end
+          inherited Edit4: TEdit
+            Size.Width = 450.000000000000000000
+          end
+          inherited Edit5: TEdit
+            Size.Width = 450.000000000000000000
+          end
+          inherited DateEdit1: TDateEdit
+            Size.Width = 450.000000000000000000
+          end
+          inherited Button1: TButton
+            Size.Width = 360.000000000000000000
+          end
+          inherited Label3: TLabel
+            Size.Width = 450.000000000000000000
+          end
+        end
+      end
+      inherited TabItem2: TTabItem
+        Size.Width = 160.000000000000000000
+        ExplicitSize.cx = 125.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inherited Panel2: TPanel
+          Size.Width = 480.000000000000000000
+          Size.Height = 720.000000000000000000
+          inherited Layout1: TLayout
+            Size.Width = 480.000000000000000000
+            inherited Layout4: TLayout
+              Size.Width = 480.000000000000000000
+            end
+            inherited Label16: TLabel
+              Size.Width = 465.000000000000000000
+            end
+            inherited Edit13: TEdit
+              Size.Width = 450.000000000000000000
+            end
+            inherited Button3: TButton
+              Size.Width = 300.000000000000000000
+            end
+            inherited Label17: TLabel
+              Size.Width = 465.000000000000000000
+            end
+          end
+          inherited ListView1: TListView
+            Size.Width = 480.000000000000000000
+            Size.Height = 527.000000000000000000
+          end
+        end
+      end
+      inherited TabItem3: TTabItem
+        Size.Width = 160.000000000000000000
+        ExplicitSize.cx = 126.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inherited Panel3: TPanel
+          Size.Width = 480.000000000000000000
+          Size.Height = 720.000000000000000000
+          inherited Label8: TLabel
+            Size.Width = 455.000000000000000000
+          end
+          inherited Label9: TLabel
+            Size.Width = 465.000000000000000000
+          end
+          inherited Label10: TLabel
+            Size.Width = 465.000000000000000000
+          end
+          inherited Label11: TLabel
+            Size.Width = 465.000000000000000000
+          end
+          inherited Label12: TLabel
+            Size.Width = 465.000000000000000000
+          end
+          inherited Label13: TLabel
+            Size.Width = 465.000000000000000000
+          end
+          inherited Edit6: TEdit
+            Size.Width = 450.000000000000000000
+          end
+          inherited Edit7: TEdit
+            Size.Width = 450.000000000000000000
+          end
+          inherited Edit8: TEdit
+            Size.Width = 450.000000000000000000
+          end
+          inherited Edit9: TEdit
+            Size.Width = 450.000000000000000000
+          end
+          inherited Edit10: TEdit
+            Size.Width = 450.000000000000000000
+          end
+          inherited Button2: TButton
+            Size.Width = 360.000000000000000000
+          end
+        end
+      end
+    end
+  end
+  inherited pnlFooter: TPanel
+    Position.Y = 809.000000000000000000
+    Size.Width = 480.000000000000000000
+  end
+end
