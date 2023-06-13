@@ -48,7 +48,7 @@ object frmMenu: TfrmMenu
       Size.PlatformDefault = False
       StyleLookup = 'TabControl1Style1'
       TabHeight = 49.000000000000000000
-      TabIndex = 2
+      TabIndex = 1
       TabOrder = 3
       TabPosition = PlatformDefault
       Sizes = (
@@ -306,13 +306,14 @@ object frmMenu: TfrmMenu
         TextSettings.Font.Family = 'Comic Sans MS'
         TextSettings.Font.Size = 10.000000000000000000
         StyledSettings = [Style, FontColor]
-        IsSelected = False
+        IsSelected = True
         Size.Width = 125.000000000000000000
         Size.Height = 49.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = ''
         TabOrder = 0
         Text = 'Catalogo '#55357#56798#65039
+        OnClick = TabItem2Click
         ExplicitSize.cx = 125.000000000000000000
         ExplicitSize.cy = 49.000000000000000000
         object Panel2: TPanel
@@ -448,6 +449,7 @@ object frmMenu: TfrmMenu
               TextSettings.Font.Family = 'Comic Sans MS'
               TextSettings.Font.Size = 15.000000000000000000
               TintColor = claRoyalblue
+              OnClick = Button3Click
             end
             object Label17: TLabel
               Align = Top
@@ -465,16 +467,18 @@ object frmMenu: TfrmMenu
               TabOrder = 0
             end
           end
-          object ListView1: TListView
-            ItemAppearanceClassName = 'TListItemAppearance'
-            ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
-            HeaderAppearanceClassName = 'TListHeaderObjects'
-            FooterAppearanceClassName = 'TListHeaderObjects'
+          object ListBox2: TListBox
             Align = Client
             Size.Width = 376.000000000000000000
             Size.Height = 406.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
+            DisableFocusEffect = True
+            DefaultItemStyles.ItemStyle = ''
+            DefaultItemStyles.GroupHeaderStyle = ''
+            DefaultItemStyles.GroupFooterStyle = ''
+            Viewport.Width = 376.000000000000000000
+            Viewport.Height = 406.000000000000000000
           end
         end
         object Panel5: TPanel
@@ -493,7 +497,7 @@ object frmMenu: TfrmMenu
         TextSettings.Font.Family = 'Comic Sans MS'
         TextSettings.Font.Size = 10.000000000000000000
         StyledSettings = [Style, FontColor]
-        IsSelected = True
+        IsSelected = False
         Size.Width = 126.000000000000000000
         Size.Height = 49.000000000000000000
         Size.PlatformDefault = False

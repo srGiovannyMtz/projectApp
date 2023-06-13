@@ -63,15 +63,18 @@ type
     Edit13: TEdit;
     Button3: TButton;
     Label17: TLabel;
-    ListView1: TListView;
     Panel4: TPanel;
     Panel5: TPanel;
     Panel6: TPanel;
+    ListBox2: TListBox;
     procedure btnCloseClick(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure TabItem1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Layout3Resize(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure TabItem2Click(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -101,6 +104,13 @@ begin
 frmMain.Query.SQL.clear;
 frmMain.Query.ExecSQL('INSERT INTO cliente(nombre,rfc,direccion) VALUES("'+edit7.Text+'","'+edit6.Text+'","'+edit8.Text+' ");');
 frmMain.Query.ExecSQL('INSERT INTO cliente_num(numero,observaciones,rfc) VALUES("'+edit9.Text+'","'+edit10.Text+'","'+edit6.Text+'");');
+
+end;
+
+procedure TfrmMenu.Button3Click(Sender: TObject);
+begin
+frmMain.Query.SQL.clear;
+frmMain.Query.ExecSQL('INSERT INTO producto(idproducto,descripcion,precio) VALUES("'+edit11.Text+'","'+edit13.Text+'","'+edit12.Text+' ");');
 
 end;
 
@@ -155,8 +165,11 @@ Layout2.Size.Width := frmMenu.Width/2;
 Layout3.Size.Width := frmMenu.Width/2;
 end;
 
+
+
 procedure TfrmMenu.TabItem1Click(Sender: TObject);
 begin
+  ListBox1.Items.Clear;
 
   frmMain.Query.Active := false;
   frmMain.Query.SQL.Text := 'Select rfc , nombre , direccion FROM cliente';
@@ -167,6 +180,24 @@ begin
     frmMain.Query.Next;
   end;
 
+end;
+
+procedure TfrmMenu.TabItem2Click(Sender: TObject);
+begin
+begin
+
+  ListBox2.Items.Clear;
+
+  frmMain.Query.Active := false;
+  frmMain.Query.SQL.Text := 'Select idproducto , descripcion , precio FROM producto';
+  frmMain.Query.Active := True;
+  While not frmMain.Query.Eof do
+  begin
+    ListBox2.Items.Add('idproducto: '+frmMain.Query.Fields[0].Text + '  |descripcion: ' + frmMain.Query.Fields[1].Text  + '  |precio: ' + frmMain.Query.Fields[2].Text);
+    frmMain.Query.Next;
+  end;
+
+end;
 end;
 
 end.
