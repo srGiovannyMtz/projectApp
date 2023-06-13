@@ -1,5 +1,5 @@
 inherited frmMenu_LgXhdpiTb: TfrmMenu_LgXhdpiTb
-  ClientHeight = 828
+  ClientHeight = 829
   ClientWidth = 480
   DesignerMasterStyle = 3
   inherited pnlEncabezado: TPanel
@@ -10,7 +10,7 @@ inherited frmMenu_LgXhdpiTb: TfrmMenu_LgXhdpiTb
   end
   inherited VertScrollBox1: TVertScrollBox
     Size.Width = 480.000000000000000000
-    Size.Height = 769.000000000000000000
+    Size.Height = 770.000000000000000000
     Viewport.Width = 480.000000000000000000
     Viewport.Height = 769.000000000000000000
     inherited TabControl1: TTabControl
@@ -172,7 +172,7 @@ inherited frmMenu_LgXhdpiTb: TfrmMenu_LgXhdpiTb
     end
   end
   inherited pnlFooter: TPanel
-    Position.Y = 809.000000000000000000
+    Position.Y = 810.000000000000000000
     Size.Width = 480.000000000000000000
   end
 end

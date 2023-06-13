@@ -60,13 +60,23 @@ var
 implementation
 
 uses
-  uRegister, smsReset, Menu;
+  uRegister, smsReset, Menu, FMX.DialogService.Async;
 
 {$R *.fmx}
 
 procedure TfrmMain.btnCloseClick(Sender: TObject);
 begin
-  close;
+  TDialogServiceAsync.MessageDialog('¿Quieres cerrar la app?', TMsgDlgType.mtConfirmation,
+    [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], TMsgDlgBtn.mbNo, 0,
+    procedure(const AResult: TModalResult)
+    begin
+      case AResult of
+        mrYes:
+        begin
+          Close;
+        end;
+      end
+    end);
 end;
 
 procedure TfrmMain.btnLoginClick(Sender: TObject);

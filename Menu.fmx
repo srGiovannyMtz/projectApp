@@ -48,7 +48,7 @@ object frmMenu: TfrmMenu
       Size.PlatformDefault = False
       StyleLookup = 'TabControl1Style1'
       TabHeight = 49.000000000000000000
-      TabIndex = 1
+      TabIndex = 2
       TabOrder = 3
       TabPosition = PlatformDefault
       Sizes = (
@@ -275,6 +275,7 @@ object frmMenu: TfrmMenu
             TextSettings.Font.Family = 'Comic Sans MS'
             TextSettings.Font.Size = 15.000000000000000000
             TintColor = claMediumpurple
+            OnClick = Button1Click
           end
           object Label3: TLabel
             Align = Top
@@ -306,7 +307,7 @@ object frmMenu: TfrmMenu
         TextSettings.Font.Family = 'Comic Sans MS'
         TextSettings.Font.Size = 10.000000000000000000
         StyledSettings = [Style, FontColor]
-        IsSelected = True
+        IsSelected = False
         Size.Width = 125.000000000000000000
         Size.Height = 49.000000000000000000
         Size.PlatformDefault = False
@@ -497,7 +498,7 @@ object frmMenu: TfrmMenu
         TextSettings.Font.Family = 'Comic Sans MS'
         TextSettings.Font.Size = 10.000000000000000000
         StyledSettings = [Style, FontColor]
-        IsSelected = False
+        IsSelected = True
         Size.Width = 126.000000000000000000
         Size.Height = 49.000000000000000000
         Size.PlatformDefault = False
@@ -1592,5 +1593,9 @@ object frmMenu: TfrmMenu
           6D44656661756C74080B5374726F6B652E4B696E6407044E6F6E650000}
       end>
     Top = 8
+  end
+  object NotificationCenter1: TNotificationCenter
+    Left = 336
+    Top = 637
   end
 end

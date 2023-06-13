@@ -7,7 +7,8 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.Layouts, FMX.DialogService, FMX.TabControl,
   FMX.Edit, FMX.ListBox, FMX.DateTimeCtrls, FMX.ListView.Types,
-  FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView;
+  FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView,
+  System.Notification;
 
 type
   TfrmMenu = class(TForm)
@@ -67,6 +68,7 @@ type
     Panel5: TPanel;
     Panel6: TPanel;
     ListBox2: TListBox;
+    NotificationCenter1: TNotificationCenter;
     procedure btnCloseClick(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure TabItem1Click(Sender: TObject);
@@ -74,6 +76,7 @@ type
     procedure Layout3Resize(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure TabItem2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -86,9 +89,9 @@ var
   closeOK: boolean;
 
 implementation
-
 {$R *.fmx}
 {$R *.LgXhdpiTb.fmx ANDROID}
+
 
 uses
 uRegister, uMain;
@@ -98,20 +101,54 @@ begin
 close;
 end;
 
+procedure TfrmMenu.Button1Click(Sender: TObject);
+var Notification: TNotification;
+var DateText: string;
+begin
+  if ((Edit1.Text<>'')and(Edit2.text<>'')and(Edit3.Text<>'')and(Edit4.Text<>'')and(Edit5.Text<>'')) then
+  begin
+
+  DateText := DateToStr(DateEdit1.Date);
+
+  frmMain.Query.SQL.clear;
+  frmMain.Query.ExecSQL('INSERT INTO venta(estatus,rfc,idproducto,precio,cantidad) VALUES("'+edit3.Text+'","'+Edit1.Text+'","'+Edit2.Text+'","'+Edit5.Text+'","'+Edit4.Text+' ");');
+
+  //Muestra notificacion local cuando se crea una venta
+  Notification := NotificationCenter1.CreateNotification;
+    try
+      Notification.Name := 'MyNotification';
+      Notification.AlertBody := '¡Venta realizada correctamente!';
+      Notification.EnableSound := True;
+      NotificationCenter1.ScheduleNotification(Notification);
+    finally
+      Notification.Free;
+    end;
+  end
+  else
+    ShowMessage('¡Llena todos los campos!')
+end;
+
 procedure TfrmMenu.Button2Click(Sender: TObject);
 begin
-
-frmMain.Query.SQL.clear;
-frmMain.Query.ExecSQL('INSERT INTO cliente(nombre,rfc,direccion) VALUES("'+edit7.Text+'","'+edit6.Text+'","'+edit8.Text+' ");');
-frmMain.Query.ExecSQL('INSERT INTO cliente_num(numero,observaciones,rfc) VALUES("'+edit9.Text+'","'+edit10.Text+'","'+edit6.Text+'");');
-
+if ((Edit6.Text<>'')and(Edit7.Text<>'')and(Edit8.Text<>'')and(Edit9.Text<>'')and(Edit10.Text<>'')) then
+  begin
+    frmMain.Query.SQL.clear;
+    frmMain.Query.ExecSQL('INSERT INTO cliente(nombre,rfc,direccion) VALUES("'+edit7.Text+'","'+edit6.Text+'","'+edit8.Text+' ");');
+    frmMain.Query.ExecSQL('INSERT INTO cliente_num(numero,observaciones,rfc) VALUES("'+edit9.Text+'","'+edit10.Text+'","'+edit6.Text+'");');
+  end
+  else
+    ShowMessage('¡Llena todos los campos!')
 end;
 
 procedure TfrmMenu.Button3Click(Sender: TObject);
 begin
-frmMain.Query.SQL.clear;
-frmMain.Query.ExecSQL('INSERT INTO producto(idproducto,descripcion,precio) VALUES("'+edit11.Text+'","'+edit13.Text+'","'+edit12.Text+' ");');
-
+  if ((Edit11.Text <> '') and (Edit12.Text <> '') and (Edit13.Text <> '')) then
+  begin
+    frmMain.Query.SQL.clear;
+    frmMain.Query.ExecSQL('INSERT INTO producto(idproducto,descripcion,precio) VALUES("'+edit11.Text+'","'+edit13.Text+'","'+edit12.Text+' ");');
+  end
+  else
+     ShowMessage('Llena todos los campos')
 end;
 
 procedure TfrmMenu.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
