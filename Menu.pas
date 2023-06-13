@@ -64,6 +64,9 @@ type
     Button3: TButton;
     Label17: TLabel;
     ListView1: TListView;
+    Panel4: TPanel;
+    Panel5: TPanel;
+    Panel6: TPanel;
     procedure btnCloseClick(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure TabItem1Click(Sender: TObject);
